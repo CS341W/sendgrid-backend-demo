@@ -6,7 +6,9 @@
   target="_self"
   action="/subscribers/create"
   enctype="multipart/form-data"
->
+  </form>
+  <input type="hidden" name="_csrf" value="{{csrfToken}}" />
+
   <div class="row">
     <input type="text" name="fname" placeholder="First Name" required />
     <input type="text" name="lname" placeholder="Last Name" required /></div>
@@ -22,7 +24,6 @@
     <input type="email" name="email" id="email" />
   </div>
   <div class="row">
-    <input type="hidden" name="_csrf" value="{{csrfToken}}" />
     <label for="birthday">
       Birthday
     </label>
